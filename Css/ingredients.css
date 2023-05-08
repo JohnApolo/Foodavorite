@@ -1,0 +1,174 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body  {
+    background-image: url("../Img/Bg.jpg");
+}
+
+.LogoTitle, .Searchbar {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: lightseagreen;
+}
+
+.Searchbar {
+    margin-top: 50px;
+}
+
+.Searchbar input, .Searchbar button {
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    font-size: 1.5vw;
+    background-image: url("../Img/Bg2.jpg");
+    background-repeat: repeat;
+}
+
+.Searchbar input {
+    cursor: auto;
+    margin-right: 2px;
+    font-size: 4vw;
+}
+
+.Searchbar button {
+    cursor: pointer;
+    font-size: 4vw;
+}
+
+.Searchbar p {
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    position: fixed;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    background-color: lightseagreen;
+    display: none;
+}
+
+.RecipeInfo {
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 90%;
+    display: inline-block;
+    color: white;
+    background-image: url("../Img/Bg3.jpg");
+    background-repeat: repeat;
+}
+
+.RecipeImg {
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+
+.RecipeImg img{
+    width: 100%;
+}
+
+.RecipeInfo h3, .summary {
+    text-align: justify;
+}
+
+.summary a {
+    color: lightseagreen;
+}
+
+.summary a:hover {
+    color: rgb(40, 230, 220);
+}
+
+.recipeDetails{
+    width: 90%;
+}
+
+.IngredientsResult, .StepsResult {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 50px;
+    background-image: url("../Img/Bg3.jpg");
+    background-repeat: repeat;
+}
+
+.IngredientsResult h3, .IngredientsResult ol, .StepsResult h3, .StepsResult ol {
+    text-align: left;
+    color: white;
+}
+
+.backBtn {
+    margin-top: 50px;;
+    width: 90%;
+    text-align: left;
+}
+
+.backBtn a {
+    padding: 1%;
+    color: black;
+    background-image: url("../Img/Bg2.jpg");
+    background-repeat: repeat;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 1200px) {
+    .Searchbar input {
+        cursor: auto;
+        margin-right: 2px;
+        font-size: 2vw;
+    }
+
+    .Searchbar button {
+        cursor: pointer;
+        font-size: 2vw;
+    }
+
+    .RecipeInfo, .IngredientsResult, .StepsResult {
+        width: 50%;
+    }
+
+    .RecipeImg {
+        float: left;
+        width: 50%;
+        height: 100%;
+        padding: 5px;
+        margin-right: 10px;
+        background-image: url("../Img/Bg2.jpg");
+        background-repeat: repeat;
+    }
+    
+    .RecipeImg img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .recipeDetails{
+        width: 50%;
+    }
+
+    .IngredientsResult {
+        float: left;
+        width: 50%;
+        padding: 0;
+        margin: 0;
+        background-image: url("../Img/Bg3.jpg");
+        background-repeat: repeat;
+    }
+
+    .StepsResult {
+        float: left;
+        width: 50%;
+        padding: 0;
+        margin: 0;
+        background-image: none;
+        background-repeat: repeat;
+    }
+
+    .backBtn {
+        width: 50%;
+    }
+}

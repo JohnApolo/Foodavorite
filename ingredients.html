@@ -1,0 +1,43 @@
+<!Doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Foodavorite</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Food recipe search web app">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Llyod Apolo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Css/ingredients.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/2ca165613c.js" crossorigin="anonymous"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <a href="index.html">
+        <div class="LogoTitle">
+            <img src="Img/Foodavorite.png" width="64" height="64" alt="Logo" />
+            <h2>Foodavorite</h2>
+        </div>
+    </a>
+    <div class="Searchbar" id="Searchbar">
+        <input type="text" name="srecipe" id="SRecipe" value="" placeholder="Search a recipe" />
+        <button name="submitrecipe" value="Search" onclick="SearchForRecipe()"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <p id="SearchError">Searchbar is empty</p>
+    </div>
+
+    <center>
+        <div class="backBtn"><a href="javascript:history.back()">Back</a><br></div>
+        <div class="RecipeInfo" id="RecipeInfo"></div>
+    </center>
+
+    <center>
+        <div class="recipeDetails">
+            <div class="IngredientsResult" id="IngredientsResult"></div>
+            <div class="StepsResult" id="StepsResult"></div>
+        </div>
+    </center>
+
+    <script src="Js/get_Ingredients.js" type="text/babel"></script>
+</body>
+</html>

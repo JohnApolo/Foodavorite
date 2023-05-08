@@ -1,0 +1,203 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body  {
+    background-image: url("../Img/Bg.jpg");
+}
+
+a {
+    text-decoration: none;
+}
+
+.LogoTitle, .Searchbar {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: lightseagreen;
+}
+
+.Searchbar {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Searchbar input, .Searchbar button {
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    font-size: 1.5vw;
+    background-image: url("../Img/Bg2.jpg");
+    background-repeat: repeat;
+}
+
+.Searchbar input {
+    cursor: auto;
+    margin-right: 2px;
+    font-size: 4vw;
+}
+
+.Searchbar button {
+    cursor: pointer;
+    font-size: 4vw;
+}
+
+.Searchbar p {
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    position: fixed;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    color: black;
+    background-image: url("../Img/Bg2.jpg");
+    background-repeat: repeat;
+    display: none;
+}
+
+.RecipeResult {
+    width: 85%;
+    height: auto;
+    padding: 20px;
+    margin-top: 50px;
+    display: none;
+}
+
+.ResultFrame {
+    float: left;
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-shadow: 10px 10px rgba(31, 31, 31, 0.6);
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-image: url("../Img/Bg2.jpg");
+    background-repeat: repeat;
+}
+
+.ResultFrame img {
+    width: 98%;
+    height: 90%;
+}
+
+.Logo {
+    width: 100%;
+    height: 100%;
+}
+
+.Logo img {
+    width: 50%;
+    height: auto;
+    opacity: 0;
+    position: absolute;
+    inset: 50% 50%;
+    transform: translate(-50%, -50%);
+    transition: 2s;
+    z-index: 2;
+}
+
+.ResultFrame p {
+    width: 100%;
+    font-size: 5vw;
+    padding: 10px;
+    position: absolute;
+    top: -10%;
+    color: black;
+    background-image: url("../Img/Bg2.jpg");
+    background-repeat: repeat;
+    z-index: 3;
+}
+
+.ResultFrame a {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    color: lightseagreen;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeOutIn {
+    0% {opacity: 1;}
+    40% {opacity: 0;}
+    60% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes moveUp {
+    0% {top: 50%;}
+    100% {top: 15%;}
+}
+
+@media only screen and (min-width: 500px) {
+    .ResultFrame {
+        float: left;
+        width: 48%;
+        padding: 1px;
+    }
+
+    .ResultFrame p {
+        top: -10%;
+        padding: 10px;
+        font-size: 3vw;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .Searchbar input {
+        cursor: auto;
+        margin-right: 2px;
+        font-size: 2vw;
+    }
+
+    .Searchbar button {
+        cursor: pointer;
+        font-size: 2vw;
+    }
+
+    .RecipeResult {
+        width: 50%;
+        height: 30rem;
+        padding: 20px;
+    }
+
+    .ResultFrame {
+        float: left;
+        width: 30%;
+        margin: 4px;
+        margin-bottom: 5%;
+        transition: 1s;
+    }
+
+    .ResultFrame p {
+        left: 0;
+        top: -10%;
+        font-size: 1vw;
+        padding: 10px;
+        text-align: right;
+        width: 25%;
+        transition: 1s;
+    }
+
+    .ResultFrame:hover p{
+        padding-right: 20px;
+        width: 90%;
+    }
+
+    .ResultFrame:hover .Logo img {
+        opacity: 1;
+    }
+    
+    .ResultFrame:hover .Logo::after {
+        opacity: 1;
+    }
+}
